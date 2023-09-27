@@ -1,0 +1,26 @@
+<div>
+  <h1>To-Do-List</h1>
+</div>
+
+	<div>
+
+			<input [(ngModel)]="newTask" type="text"
+					value="">
+
+	</div>
+
+			<button (click)="addToList()"
+				class="btn btn-light text-success">
+				ADD TASK
+			</button>
+
+	<div *ngFor="let x of items; let index = index;"
+			class="row mt-1" style="height:100px;">
+		<div>
+			<div>{{x}}</div>
+			<input (click)="deleteTask(index)" type="button"
+				value="Delete">
+		</div>
+	</div>
+
+<router-outlet></router-outlet>
